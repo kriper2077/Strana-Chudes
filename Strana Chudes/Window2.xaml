@@ -1,0 +1,67 @@
+﻿<Window x:Class="Strana_Chudes.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Strana_Chudes"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Background="#009fda" Grid.Row="1"/>
+            <Border Background="#009fda" Grid.Row="2"/>
+            <Border Background="#009fda" Grid.Row="3"/>
+            <Border Background="#009fda" Grid.Row="4"/>
+            <Border Background="#009fda" Grid.Row="5"/>
+
+
+            <TextBox x:Name="tabnumm"  HorizontalAlignment="Center" FontSize="21" VerticalAlignment="Center" Width="200" Grid.Row="1"> </TextBox >
+            <TextBox x:Name="fioo" HorizontalAlignment="Center" FontSize="21" VerticalAlignment="Center" Width="200" Grid.Row="2"></TextBox>
+            <TextBox x:Name="poss" HorizontalAlignment="Center" FontSize="21" VerticalAlignment="Center" Width="200" Grid.Row="3"></TextBox>
+            <TextBox x:Name="datess" FontSize="21" VerticalAlignment="Center" Width="200" Grid.Row="4"></TextBox>
+            <Button x:Name="batuz" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Width="118" Click="Batdobb" >Узнать пароль</Button>
+        </Grid>
+        <Grid  Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Background="#009fda" Grid.Row="1"/>
+            <Border Background="#009fda" Grid.Row="2"/>
+            <Border Background="#009fda" Grid.Row="3"/>
+            <Border Background="#009fda" Grid.Row="4"/>
+
+            <TextBlock  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" Grid.Row="1">Табельный номер</TextBlock>
+            <TextBlock  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" Grid.Row="2">Фио</TextBlock>
+            <TextBlock  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" Grid.Row="3">Должность</TextBlock>
+            <TextBlock  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" Grid.Row="4">Дата трудоустройства</TextBlock>
+            <TextBlock x:Name="pokaz" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Grid.Row="5"/>
+
+
+        </Grid>
+    </Grid>
+</Window>

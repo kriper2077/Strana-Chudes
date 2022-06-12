@@ -1,0 +1,45 @@
+﻿<Page x:Class="Strana_Chudes.Sotrudniki2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Strana_Chudes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Sotrudniki2">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Сотрудники" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="20" />
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Label Content="Поиск по ФИО:" VerticalAlignment="Center"/>
+            <TextBox x:Name="fioBox" Width="250" VerticalAlignment="Center" TextChanged="ChangeFio"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+            <Label Content="Выбор должности:" VerticalAlignment="Center"/>
+            <ComboBox Name="positionBox" Width="250" VerticalAlignment="Center" DisplayMemberPath="Titile" SelectionChanged="ChangePosition"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" AutoGenerateColumns="False" Name="mastertable" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Табельный номер" Width="*" Binding="{Binding tabNum}"/>
+                <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Оклад" Width="*" Binding="{Binding salary}"/>
+                <DataGridTextColumn Header="Стаж" Width="*" Binding="{Binding Datestartwork}"/>
+                <DataGridTextColumn Header="Статус" Width="*" Binding="{Binding TitlePositions}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
